@@ -11,7 +11,9 @@
   margin-bottom: 40px;
 }
 
-.cover {
+//*****index*****//
+
+.book-cover {
   img {
     display: block;
     margin-left: auto;
@@ -25,4 +27,23 @@
     color: white;
     text-decoration: none;
   }
+}
+
+.index-text {
+  p {
+    padding-right: 20px;
+  }
+}
+
+//*****about*****//
+
+.headshot {
+  padding-top: 10%;
+  img {
+    max-width: 300px;
+  }
+}
+
+.about-text {
+
 }
