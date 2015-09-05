@@ -22,9 +22,6 @@ gem 'spring',        group: :development
 # deploy to heroku
 gem "rails_12factor"
 
-# send email directly from form
-gem 'mail_form'
-
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
 end
