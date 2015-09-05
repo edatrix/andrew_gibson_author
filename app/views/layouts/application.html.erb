@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AndrewGibsonAuthor</title>
+  <title>Andrew Gibson Author</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script>
+    $(document).ready(function() {
+    });
+  </script>
 </head>
 <body>
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -31,7 +35,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="/the-bloodless">The Bloodless<span class="sr-only">(current)</span></a></li>
+          <li><a href="/the-bloodless">The Bloodless<span class="sr-only">(current)</span></a></li>
           <li><a href="/about">About Andrew<span class="sr-only">(current)</span></a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
@@ -47,8 +51,15 @@
 
 <%= yield %>
 
-<div>
-</div>
+  <footer class="footer-site">
+    <div class="container">
+      <div class="row">
+        <p class="footer-tagline">Copyright 2015 Andrew Gibson.  All rights reserved.</p>
+        <p class="footer-tagline">designed and built by <a href="https://about.me/edatrix">@edatrix</a>
+        </p>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
