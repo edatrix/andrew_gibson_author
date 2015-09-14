@@ -1,5 +1,8 @@
-<h1>FanMailer#notify</h1>
-
 <p>
-  <%= @greeting %>, find me in app/views/fan_mailer/notify.html.erb
+  <%= @user.name %> left you a message:
+</p>
+<p>
+  <%= @user.text %>
+</p>
+  Respond to <%= @user.name %> here: <%= @user.email %>
 </p>
