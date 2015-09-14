@@ -11,5 +11,4 @@ class StaticController < ApplicationController
 
   def book
   end
-
 end
