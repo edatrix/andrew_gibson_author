@@ -39,7 +39,7 @@
         <ul class="nav navbar-nav">
           <li><a href="/the-bloodless">The Bloodless<span class="sr-only">(current)</span></a></li>
           <li><a href="/about">About Andrew<span class="sr-only">(current)</span></a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="/users">Contact</a></li>
         </ul>
         <!-- <form class="navbar-form navbar-right" role="search">
           <div class="form-group">
@@ -50,7 +50,11 @@
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
-
+  <div class="container">
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+  </div>
 <%= yield %>
 
   <footer class="footer-site">

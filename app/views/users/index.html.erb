@@ -1,18 +1,23 @@
 <div class="container-fluid body">
-  <form class="col-md-6">
-    <%= form_tag :html => {:action => "contact"} do %>
-      <%= label_tag 'name' %>
-      <%= text_field_tag "contact[name]", nil, class: "form-control" %>
-      <br/>
-      <%= label_tag 'email' %>
-      <%= email_field_tag "contact[email]", nil, class: "form-control" %>
-      <br/>
-      <%= label_tag 'message' %>
-      <%= text_area_tag "contact[message]", nil, class: "form-control" %>
-      <br/>
-      <%= submit_tag "Submit", class: "btn btn-success" %>
+  <div class="col-md-6">
+    <%= form_for(@user, html: {multipart: true}) do |f| %>
+      <p>
+        <%= f.label :name, "Full Name" %><br>
+        <%= f.text_field :name, class: 'form-control' %>
+      </p>
+      <p>
+        <%= f.label :email, "Email Address" %><br>
+        <%= f.email_field :email, class: 'form-control' %>
+      </p>
+      <p>
+        <%= f.label :text, "Message" %><br>
+        <%= f.textarea :text, input_html: { rows: "10"}, class: 'form-control' %>
+      </p>
+      <p>
+        <%= f.submit "Submit", class: "btn btn-primary" %>
+      </p>
     <% end %>
-  </form>
+  </div>
 
   <div class="col-md-6">
     <div class="social">
