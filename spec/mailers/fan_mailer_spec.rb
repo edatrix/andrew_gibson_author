@@ -21,6 +21,6 @@ RSpec.describe FanMailer, :type => :mailer do
      FanMailer.notify(user).deliver
      result = ActionMailer::Base.deliveries.last
      expect(result)
-     expect(result.subject).to match("Pete Mitchell, is interested in your book, The Bloodless.")
+     expect(result.subject).to match("Pete Mitchell is interested in your book, The Bloodless.")
    end
 end
