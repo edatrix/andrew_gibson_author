@@ -10,7 +10,8 @@ class UsersController < ApplicationController
       flash[:notice] = "You've successfully submitted your message."
       redirect_to root_url
     else
-      render :new
+      flash[:alert] = "All fields are required."
+      redirect_to :back
     end
   end
 
